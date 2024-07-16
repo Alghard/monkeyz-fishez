@@ -1,28 +1,20 @@
 import { Inter } from "next/font/google";
 import React, { useEffect, useState } from "react";
+import Cards from "./components/cards";
+import Header from "./components/header";
+import Footer from "./components/footer";
+import MonkeysGif from "./components/monkeysGif";
+import FishesGif from "./components/fishesGif";
+import TrendingGif from "./components/trendingGif";
 
 export default function Home() {
-    const [message, setMessage] = useState("Loading...");
-    const [monkey, setMonkey] = useState([]);
-
-    useEffect(() => {
-        fetch("http://localhost:3001/api/home")
-            .then((response) => response.json())
-            .then((data) => {
-                setMessage(data.message);
-                setMonkey(data.monkey);
-            });
-    }, []);
-
     return (
         <main>
-            <div>{message}</div>
-            <div>
-                {monkey.map((monkey, index) => (
-                    <div key={index}>{monkey}</div>
-                ))}
-            </div>
-            <h1>TUTUTUTUTUTU</h1>;
+            <Header></Header>
+            <TrendingGif></TrendingGif>
+            <MonkeysGif></MonkeysGif>
+            <FishesGif></FishesGif>
+            <Footer></Footer>
         </main>
     );
 }
