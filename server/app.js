@@ -1,14 +1,10 @@
 const express = require('express');
 const mongoose = require("mongoose");
-const username = "julienvarela"; //!! A déplacer
-const password = "vZLBQiX1dF2Ye7Ed"; //!! A déplacer
-const uri = `mongodb+srv://${username}:${password}@cluster0.xiy2i40.mongodb.net/monkeys_fishes?retryWrites=true&w=majority&appName=Cluster0`;
-const mongo = { uri: `${uri}`};
+const monkeyRoutes = require('./routes/monkey');
+require('dotenv/config'); //!! allow acces to .env file
 
-const Monkey = require('./models/monkey')
-
-//!! Fonction permettant à Mongoose de se connecter à la bdd Mongo
-mongoose.connect(mongo.uri)
+//!! DB connection
+mongoose.connect(process.env.DB_URI)
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 
@@ -26,21 +22,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.post('/api/monkeys', (req, res, next) => {
-  delete req.body._id;
-  const monkey = new Monkey({
-    ...req.body
-  });
-  monkey.save()
-    .then(() => res.status(201).json({ message: 'Objet enregistré !'}))
-    .catch(error => res.status(400).json({ error }));
-});
-
-app.use('/api/monkeys', (req, res, next) => {
-  Monkey.find()
-    .then(monkeys => res.status(200).json(monkeys))
-    .catch(error => res.status(400).json({ error }));
-});
+app.use('/api/monkeys', monkeyRoutes);
 
 app.use((req, res, next) => {
   console.log('Réponse envoyée avec succès !');
