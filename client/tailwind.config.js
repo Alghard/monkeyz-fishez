@@ -32,11 +32,16 @@ module.exports = {
         },
         extend: {
             animation: {
-                "soft-zoom": "soft-zoom 1s ease-in-out",
+                "soft-zoom": "soft-zoom 1s infinite",
+                "bouncy-move": "bouncy-move 3s linear 1s infinite alternate",
             },
             keyframes: {
                 "soft-zoom": {
                     "0%, 100%": { transform: "scale(1.1)" },
+                },
+                "bouncy-move": {
+                    "0%": { transform: "translateX(0)" },
+                    "100%": { transform: "translateX(-100%)" },
                 },
             },
         },
