@@ -30,7 +30,16 @@ module.exports = {
             "5xl": "3rem",
             "6xl": "4rem",
         },
-        extend: {},
+        extend: {
+            animation: {
+                "soft-zoom": "soft-zoom 1s ease-in-out",
+            },
+            keyframes: {
+                "soft-zoom": {
+                    "0%, 100%": { transform: "scale(1.1)" },
+                },
+            },
+        },
     },
     plugins: [],
 };

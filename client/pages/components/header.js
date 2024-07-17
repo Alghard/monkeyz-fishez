@@ -1,10 +1,10 @@
 export default function Header() {
     return (
-        <div className="flex border-2 border-orange-400 ">
-            <ul className="flex mx-auto p-5 m-5">
-                <li>Monkeys Gifs</li>
-                <li>Fishes Gifs</li>
-                <li>Trending Gifs</li>
+        <div className="flex justify-around p-5 backdrop-blur-sm bg-[#9e8c80]/30">
+            <ul className="flex mx-auto m-5 z-10">
+                <li className="p-5  ">Monkeys Gifs</li>
+                <li className="p-5">Fishes Gifs</li>
+                <li className="p-5">Trending Gifs</li>
             </ul>
         </div>
     );
