@@ -5,7 +5,7 @@ import MonkeyList from "./components/monkeyList";
 
 export default function Home() {
     return (
-        <main className="bg-slate-800">
+        <main className="bg-slate-200">
           <MonkeyAddForm />
           <MonkeyList />
         </main>

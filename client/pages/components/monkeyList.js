@@ -1,26 +1,26 @@
 import React, { useEffect, useState } from 'react';
+import Image from "next/image";
+import Cards from "./cards";
 
 const MonkeyList = () => {
   const [monkeys, setMonkeys] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    console.log("fetching mokis");
-    fetch('http://localhost:3001/api/monkeys/')
-      .then(response => {
-        if(!response.ok) {
-          throw new Error('network error');
+    const fetchMonkeys = async () => {
+      try {
+        const response = await fetch('/api/monkeys');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
         }
-        return response.json;
-      })
-      .then(data => {
-        console.log("Data fetched:", data);
+        const data = await response.json();
         setMonkeys(data);
-        console.log(monkeys);
-      })
-      .catch(error => {
+      } catch (error) {
         setError(error.message);
-      });
+      }
+    };
+
+    fetchMonkeys();
   }, []);
 
   if (error) {
@@ -28,17 +28,10 @@ const MonkeyList = () => {
   }
 
   return (
-    <div>
-      <h1>List of Monkeys</h1>
-      <ul>
-        {monkeys.map(monkey => (
-          <li key={monkey._id}>
-            <strong>Name:</strong> {monkey.title}<br />
-            <strong>Age:</strong> {monkey.description}<br />
-            <strong>Species:</strong> {monkey.imageUrl}
-          </li>
-        ))}
-      </ul>
+    <div className="flex flex-wrap justify-center gap-5">
+      {monkeys.map(monkey => (
+        <Cards key={monkey._id} title={monkey.title} description={monkey.description} imageUrl={monkey.imageUrl} />
+      ))}
     </div>
   );
 };
