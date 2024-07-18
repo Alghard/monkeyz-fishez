@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
 const monkeySchema = mongoose.Schema({
-  title: {type: String, required: true},
-  description: {type: String, required: true},
-  imageUrl: {type: String, required: true}
+  title: {type: String, required: [true, "Please provide a title for this monkey"], maxlength: [30, "Title cannot be more than 30 characters"]},
+  description: {type: String, required: [true, "Please provide a description for this monkey"], maxlength: [500, "Description cannot be more than 500 characters"]},
+  imageUrl: {type: String, required: [true, "Please provide an image url for this monkey"]}
 });
 
 monkeySchema.methods.yell = function() {
