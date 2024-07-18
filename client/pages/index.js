@@ -1,6 +1,4 @@
-import { Inter } from "next/font/google";
 import React, { useEffect, useState } from "react";
-import Cards from "./components/cards";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import MonkeysGif from "./components/monkeysGif";
