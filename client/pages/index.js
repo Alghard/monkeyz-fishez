@@ -19,7 +19,7 @@ const Index = ({ monkeys }) => {
             <Footer></Footer>
         </main>
     );
-}
+};
 
 /* Retrieves monkeys data from mongodb database */
 export async function getServerSideProps() {
