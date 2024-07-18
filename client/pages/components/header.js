@@ -12,7 +12,7 @@ export default function Header() {
                 <nav className="bg-[#276B4D] mx-auto m-5 p-2 font-poppins font-medium text-white">
                     <ul className="flex justify-around">
                         <li className="p-5">
-                            <a href="#monkeysGif">Monkeys Gifs</a>
+                            <a href="#monkeysGif">Monkeys Gifs !!!!!!!!</a>
                         </li>
                         <li className="p-5">
                             <a href="#trendyGif">Trending Gifs</a>
