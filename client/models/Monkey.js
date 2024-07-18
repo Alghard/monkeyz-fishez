@@ -13,4 +13,4 @@ monkeySchema.methods.yell = function() {
   console.log(greeting);
 }
 
-module.exports = mongoose.model('monkey', monkeySchema);
+export default mongoose.models.Monkey || mongoose.model("Monkey", monkeySchema);
