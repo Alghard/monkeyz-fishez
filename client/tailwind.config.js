@@ -49,16 +49,10 @@ module.exports = {
                 poppins: ["Poppins", "sans-serif"],
                 alfaslab: ["Alfa Slab One", "serif"],
             },
-            //! MON BEFORE/AFTER S'AFRICHE MAIS PAS MON IMAGE !! IDK WHY STILL NEED TO DIG ABOUT IT, I WANT TO CRY RN, ERROR : "GET /images/lianeD.svg 404 in 28ms"
             content: {
-                lianeG: 'url("/assets/images/lianeG.svg")',
-                lianeD: 'url("/assets/images/lianeD.svg")',
+                lianeG: 'url("/img/lianeG.svg")',
+                lianeD: 'url("/img/lianeD.svg")',
             },
-            //! Si j'utilise un lien internet ça marche... mais pas avec mon image
-            // content: {
-            //     lianeG: 'url("https://picsum.photos/100")',
-            //     lianeD: 'url("https://picsum.photos/100")',
-            // },
         },
     },
     plugins: [],

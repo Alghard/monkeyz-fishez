@@ -13,3 +13,30 @@
         text-wrap: balance;
     }
 }
+
+.before-content-lianeG::before {
+    content: url("/img/lianeG.svg");
+    position: absolute;
+    top: -10px;
+    left: -30px;
+    width: 400px; /* Ajuste la taille selon tes besoins */
+    height: 400px; /* Ajuste la taille selon tes besoins */
+    z-index: 20;
+}
+
+.after-content-lianeD::after {
+    content: url("/img/lianeD.svg");
+    position: absolute;
+    top: -70px;
+    right: 0;
+    width: 400px; /* Ajuste la taille selon tes besoins */
+    height: 400px; /* Ajuste la taille selon tes besoins */
+    z-index: 20;
+}
+
+@media (max-width: 1023px) {
+    .before-content-lianeG::before,
+    .after-content-lianeD::after {
+        content: none;
+    }
+}
