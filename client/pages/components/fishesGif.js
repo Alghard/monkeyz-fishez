@@ -13,7 +13,6 @@ export default function FishesGif() {
                 <Cards></Cards>
                 <Cards></Cards>
                 <Cards></Cards>
-                <Cards></Cards>
             </div>
         </section>
     );

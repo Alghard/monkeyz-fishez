@@ -8,7 +8,7 @@ export default function MonkeysGif() {
                 MONKEYS GIFS 🦍
             </h1>
             <hr className="mx-12 my-5 border-gray-600 border-1" />
-            <div className="flex flex-wrap lg:flex-row md:flex-row sm:flex-row xs:flex-col xs:items-center justify-around m-10 p-5 relative gap-5">
+            <div className="m-10 p-5 relative">
                 <MonkeyList />
             </div>
         </section>

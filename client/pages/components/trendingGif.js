@@ -14,7 +14,6 @@ export default function TrendingGif() {
                 <Cards></Cards>
                 <Cards></Cards>
                 <Cards></Cards>
-                <Cards></Cards>
             </div>
         </section>
     );
