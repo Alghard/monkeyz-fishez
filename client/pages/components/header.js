@@ -1,10 +1,9 @@
 import Image from "next/image";
-import bouncyMoki from "../assests/images/bouncyMoki.svg";
+import bouncyMoki from "../assets/images/bouncyMoki.svg";
 
 export default function Header() {
     return (
-        //! MON BEFORE AVEC NE MARCHE PAS, IDK WHY STILL NEED TO DIG ABOUT IT, I WANT TO CRY RN, ERROR : "GET /images/lianeD.svg 404 in 28ms"
-        <section className="relative before:content-lianeG after:content-lianeD before:absolute before:top-0 before:left-0 after:absolute after:top-0 after:right-0">
+        <div className="relative before:content-lianeG after:content-lianeD before:absolute before:top-0 before:left-0 after:absolute after:top-0 after:right-0 after:inline-block after:size-40">
             <div className="flex justify-around p-5 bg-[#F5F3E2]">
                 <Image src={bouncyMoki} className="size-12 animate-bouncy-move" alt="Bouncy Moki" />
             </div>
@@ -23,6 +22,6 @@ export default function Header() {
                     </ul>
                 </nav>
             </div>
-        </section>
+        </div>
     );
 }
