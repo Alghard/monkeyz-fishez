@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ProfilPic from "../assests/icons/monkeyIcon.svg";
+import ProfilPic from "../assets/icons/monkeyIcon.svg";
 
 export default function Footer() {
     return (

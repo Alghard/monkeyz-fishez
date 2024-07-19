@@ -51,14 +51,14 @@ module.exports = {
             },
             //! MON BEFORE/AFTER S'AFRICHE MAIS PAS MON IMAGE !! IDK WHY STILL NEED TO DIG ABOUT IT, I WANT TO CRY RN, ERROR : "GET /images/lianeD.svg 404 in 28ms"
             content: {
-                lianeG: 'url("/images/lianeG.svg")',
-                lianeD: 'url("/images/lianeD.svg")',
+                lianeG: 'url("/assets/images/lianeG.svg")',
+                lianeD: 'url("/assets/images/lianeD.svg")',
             },
             //! Si j'utilise un lien internet ça marche... mais pas avec mon image
-            content: {
-                lianeG: 'url("https://picsum.photos/100")',
-                lianeD: 'url("https://picsum.photos/100")',
-            },
+            // content: {
+            //     lianeG: 'url("https://picsum.photos/100")',
+            //     lianeD: 'url("https://picsum.photos/100")',
+            // },
         },
     },
     plugins: [],
