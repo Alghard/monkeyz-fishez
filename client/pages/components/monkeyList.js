@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
+import Link from "next/link";
 import Cards from "./cards";
 
 const MonkeyList = () => {
@@ -30,7 +30,7 @@ const MonkeyList = () => {
     return (
         <div className="flex flex-wrap justify-evenly gap-5">
             {monkeys.map((monkey) => (
-                <Cards key={monkey._id} title={monkey.title} description={monkey.description} imageUrl={monkey.imageUrl} />
+                <Link href={`/monkey/${monkey._id}`}><Cards key={monkey._id} title={monkey.title} description={monkey.description} imageUrl={monkey.imageUrl} /></Link>
             ))}
         </div>
     );
