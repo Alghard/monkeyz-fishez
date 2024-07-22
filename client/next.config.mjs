@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async rewrites() {
+    return [
+      //Rewrites all API requests to our Express server
+      {
+        source: "/api/monkeys/:path*",
+        destination: "http://localhost:3001/api/monkeys/:path*"
+      },
+    ];
+  },
   reactStrictMode: true,
   images: {
     remotePatterns: [
