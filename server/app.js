@@ -1,7 +1,11 @@
 const express = require('express');
 const mongoose = require("mongoose");
+const cors = require('cors');
 const monkeyRoutes = require('./routes/monkey');
+
 require('dotenv/config'); //!! allow acces to .env file
+
+app.use(cors());
 
 //!! DB connection
 mongoose.connect(process.env.DB_URI)
