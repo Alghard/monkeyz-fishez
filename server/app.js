@@ -5,7 +5,7 @@ const monkeyRoutes = require('./routes/monkey');
 
 require('dotenv/config'); //!! allow acces to .env file
 
-app.use(cors());
+
 
 //!! DB connection
 mongoose.connect(process.env.DB_URI)
@@ -13,6 +13,8 @@ mongoose.connect(process.env.DB_URI)
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 
 const app = express();
+
+app.use(cors());
 
 app.use(express.json());
 

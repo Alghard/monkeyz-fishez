@@ -12,7 +12,7 @@ const MonkeyAddForm = () => {
 
   const newMonkey = { title, description, imageUrl };
 
-  fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/monkeys`, {
+  fetch(`http://localhost:3001/api/monkeys`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
