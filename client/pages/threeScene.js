@@ -41,8 +41,8 @@ const ThreeScene = () => {
         controls.update();
 
         // Add a spotlight
-        const spotLight = new THREE.SpotLight(0xffffff, 10000, 100, 5, 10);
-        spotLight.position.set(0, 25, 0);
+        const spotLight = new THREE.SpotLight(0xffffff, 10000, 100, 5, 20);
+        spotLight.position.set(-10, 25, 20);
         spotLight.castShadow = true;
         spotLight.shadow.bias = -0.0001;
         scene.add(spotLight);
