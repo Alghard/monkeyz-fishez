@@ -28,6 +28,7 @@ app.use((req, res, next) => {
   next();
 });
 
+// Ici je dis à mon serveur que pour toute requête envoyé sur "serveradress"/api/monkeys il doit utiliser les routes mises en places dans monkeyRoutes
 app.use('/api/monkeys', monkeyRoutes);
 
 app.use((req, res, next) => {
@@ -35,5 +36,5 @@ app.use((req, res, next) => {
 });
 
 
-
+// comme sur react on export ce qui doit être exécuté 
 module.exports = app;
