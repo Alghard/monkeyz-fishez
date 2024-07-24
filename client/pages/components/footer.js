@@ -14,7 +14,7 @@ export default function Footer() {
                 <p>Victor</p>
             </div>
             <div className="p-5">
-                <a href="#">
+                <a href="mailto:julien.varela@gmail.com">
                     <Image src={ProfilPic} alt="ProfilPicture" className="size-20"></Image>
                 </a>
                 <p>Julien</p>

@@ -9,15 +9,12 @@ const Monkey = require('../models/Monkey');
 exports.addMonkey = (req, res, next) => {
 // delete body ici va servir à nettoyer les données reçu par le serveur, en gros si il y avait déjà une id de monkey enregistré dans le body on va la supprimer pour pas créer de pb
   delete req.body._id;
-
 // on créer un nouvel objet Monkey basé sur son modèle en récupèrant toutes les infos transmises dans le body du serveur c'est à dire le formulaire d'ajout 
   const monkey = new Monkey({
     ...req.body
   });
-
 // save va enregistrer le monkey en bdd 
   monkey.save()
-
     .then(() =>
 //on envoi un message de validation si tout s'est bien passé 
  res.status(201).json({ message: 'Objet enregistré !'}))
@@ -26,10 +23,8 @@ exports.addMonkey = (req, res, next) => {
  res.status(400).json({ error }));
 };
 
-
 // ici la seul chose qui va changer c'est qu'on va avoir besoin de l'id du monkey pour modifier supprimer ou afficher
 exports.modifyMonkey = (req, res, next) => {
-
 //c'est dans les paramètres de cette fonction qu'on va demander l'id qui est qq part dans le body
   Monkey.updateOne({ _id: req.params.id }, { ...req.body, _id: req.params.id })
     .then(() => res.status(200).json({ message: 'Monkey mis à jour' }))
