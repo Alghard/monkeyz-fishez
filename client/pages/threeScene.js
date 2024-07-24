@@ -29,7 +29,6 @@ const ThreeScene = () => {
         // Create controls
         const controls = new OrbitControls(camera, renderer.domElement);
         controls.enableDamping = true;
-        controls.enablePan = false;
         controls.minDistance = 2;
         controls.maxDistance = 1;
         controls.minPolarAngle = 1;
