@@ -12,25 +12,34 @@
     .text-balance {
         text-wrap: balance;
     }
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
 }
 
 .before-content-lianeG::before {
     content: url("/img/lianeG.svg");
     position: absolute;
-    top: 30px;
-    left: -30px;
-    width: 450px;
-    height: 450px;
+    top: -90px;
+    left: -60px;
+    width: 600px;
+    height: 600px;
     z-index: 20;
 }
 
 .after-content-lianeD::after {
     content: url("/img/lianeD.svg");
     position: absolute;
-    top: 0px;
-    right: 0;
-    width: 400px;
-    height: 400px;
+    top: -90px;
+    right: -60px;
+    width: 600px;
+    height: 600px;
     z-index: 20;
 }
 
@@ -46,4 +55,11 @@
     height: 40vh;
     overflow: hidden;
     z-index: 99;
+}
+
+#try {
+    background: linear-gradient(rgb(255, 247, 247), rgb(255, 251, 251)) padding-box,
+        linear-gradient(to top, rgb(93, 207, 173), rgb(12, 153, 106)) border-box;
+    border-radius: 10px;
+    border: 2px solid transparent;
 }

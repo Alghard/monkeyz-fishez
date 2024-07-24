@@ -2,7 +2,10 @@ import Image from "next/image";
 
 export default function Cards({ title, description, imageUrl }) {
     return (
-        <div className="flex flex-col items-center text-center justify-between p-5 h-96 w-72 box-border border-2 rounded-md shadow-xl border-gray-400 bg-gray-100 hover:animate-soft-zoom  xs:hover:animate-none overflow-hidden">
+        <div
+            className="flex flex-col items-center text-center justify-between p-5 h-96 w-72 shadow-xl hover:animate-soft-zoom xs:hover:animate-none overflow-hidden"
+            id="try"
+        >
             <Image
                 src={imageUrl}
                 alt={title}
@@ -12,7 +15,9 @@ export default function Cards({ title, description, imageUrl }) {
                 unoptimized="true"
             ></Image>
             <h1 className="font-poppins font-bold mb-2">{title}</h1>
-            <p className="font-poppins max-h-16 max-w-40 text-sm">{description}</p>
+            <p className="font-poppins text-sm p-px mb-5">{description}</p>
         </div>
     );
 }
+
+// max-h-16 max-w-40 on paragraph or not. We'll see
