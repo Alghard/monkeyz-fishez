@@ -28,9 +28,11 @@ const MonkeyList = () => {
     }
 
     return (
-        <div className="flex flex-wrap justify-evenly gap-5">
+        <div className="flex flex-wrap justify-evenly xs:justify-center gap-8 xs:gap-3">
             {monkeys.map((monkey) => (
-                <Link href={`/monkey/${monkey._id}`}><Cards key={monkey._id} title={monkey.title} description={monkey.description} imageUrl={monkey.imageUrl} /></Link>
+                <Link href={`/monkey/${monkey._id}`}>
+                    <Cards key={monkey._id} title={monkey.title} description={monkey.description} imageUrl={monkey.imageUrl} />
+                </Link>
             ))}
         </div>
     );

@@ -64,8 +64,8 @@ const ThreeScene = () => {
                 mesh.position.set(0, 1.05, -1);
                 scene.add(mesh);
 
-                // Move the entire scene down by 20 pixels (adjust as needed)
-                scene.position.y -= 0.1; // Adjust this value to fit your needs
+                // Move the entire scene down by 20 pixels (like a margin)
+                scene.position.y -= 0.1;
 
                 const progressContainer = document.getElementById("progress-container");
                 if (progressContainer) {
@@ -92,12 +92,19 @@ const ThreeScene = () => {
         // Animation loop
         const animate = () => {
             requestAnimationFrame(animate);
+
+            // Check the window width and enable/disable auto-rotation (don't know if i keep this in place)
+            if (window.innerWidth <= 1023) {
+                controls.autoRotate = false;
+            } else {
+                controls.autoRotate = true;
+            }
+
             controls.update();
             renderer.render(scene, camera);
         };
 
         animate();
-
         // Cleanup function
         return () => {
             window.removeEventListener("resize", handleResize);
