@@ -1,3 +1,6 @@
+//Modèle ou schema de monkey ou comment un monkey va être structurer en bdd
+//Comme pour tout objet on peut lui donner des attributs et des méthodes
+
 const mongoose = require("mongoose");
 
 const monkeySchema = mongoose.Schema({
