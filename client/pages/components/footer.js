@@ -30,10 +30,14 @@ export default function Footer() {
                     </a>
                 </div>
             </div>
+
             <div className="flex flex-col items-center p-5">
                 <a href="#" className="text-xl">
                     Julien
                     <Image src={ProfilPic} alt="ProfilPicture" className="size-32"></Image>
+            <div className="p-5">
+                <a href="mailto:julien.varela@gmail.com">
+                    <Image src={ProfilPic} alt="ProfilPicture" className="size-20"></Image>
                 </a>
                 <div className="flex flex-row gap-5 ">
                     <a href="#">
