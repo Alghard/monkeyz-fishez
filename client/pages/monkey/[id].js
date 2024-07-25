@@ -43,26 +43,22 @@ export default function MonkeyDetail() {
 
     return (
         <>
-        <ThreeScene />
-        <Header />
+            <ThreeScene />
+            <Header />
             <div className="flex flex-col items-center text-center mx-auto justify-between p-5 h-96 w-72 box-border border-2 rounded-md shadow-xl border-gray-400 bg-gray-100 overflow-hidden mt-10">
                 <img src={monkey.imageUrl} alt={monkey.title} className="rounded-md h-40 w-40 m-5 object-cover" />
                 <h1>{monkey.title}</h1>
                 <p>{monkey.description}</p>
             </div>
-            <div className="flex justify-center gap-5 mt-10">
+            <div className="flex justify-center gap-5 mt-10 mb-10">
                 <Link href={`/monkey/edit/${id}`} className="border-2 rounded-md shadow-xl border-blue-600 bg-blue-300 p-2">
                     Modify Gif
                 </Link>
-                <button onClick={handleDelete} className="border-2 rounded-md shadow-xl border-red-600 bg-red-300 p-2">
+                <button onClick={handleDelete} className="border-2 rounded-md shadow-xl border-red-600 bg-red-300 p-2 ">
                     Delete Gif
                 </button>
             </div>
-            <p className="font-extrabold text-2xl text-center mt-12 text-red-700">
-                LES DESCRIPTIONS C'EST BIEN MAIS FAUT UNE LIMITE DE CARRACTERES POUR LES TITRES ET LA DESC AUSSI PUREE DE POMME DE TERRE
-                <img src="https://c.tenor.com/v2K_Ff6JYzkAAAAd/tenor.gif" alt="" className="h-80 w-80 mx-auto" />
-            </p>
-        <Footer />
+            <Footer />
         </>
     );
 }
