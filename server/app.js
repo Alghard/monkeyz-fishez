@@ -1,7 +1,9 @@
 const express = require('express');
 const mongoose = require("mongoose");
 const cors = require('cors');
+
 const monkeyRoutes = require('./routes/monkey');
+const userRoutes = require('./routes/user');
 
 require('dotenv/config'); //!! allow acces to .env file
 
@@ -30,6 +32,7 @@ app.use((req, res, next) => {
 
 // Ici je dis à mon serveur que pour toute requête envoyé sur "serveradress"/api/monkeys il doit utiliser les routes mises en places dans monkeyRoutes
 app.use('/api/monkeys', monkeyRoutes);
+app.use('/api/auth', userRoutes);
 
 app.use((req, res, next) => {
   console.log('Réponse envoyée avec succès !');
