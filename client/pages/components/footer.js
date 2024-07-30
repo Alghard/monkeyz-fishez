@@ -1,54 +1,46 @@
 import Image from "next/image";
-import ProfilPic from "/public/icons/monkeyIcon.svg";
 import LinkedinIcon from "/public/icons/linkedinIcon.svg";
-import GithubIcon from "/public/icons/githubIcon.svg";
+import MailIcon from "/public/icons/mailIcon.svg";
 import AboutmeIcon from "/public/icons/aboutmeIcon.svg";
 
 export default function Footer() {
     return (
-        <div className="flex justify-around items-center text-center p-5 bg-[#276B4D] font-poppins font-medium text-white">
-            <p className="text-4xl font-bold xs:text-3xl before:content-['_🐠_'] after:content-['_🐵_'] hover:before:content-['_➡️_'] hover:after:content-['_➡️_'] ">
-                Contact Us
-            </p>
+        <div
+            className="flex justify-around items-center text-center mt-10 p-5 font-poppins font-medium text-white relative after-content-footerBanner"
+            id="footerResponsive"
+        >
+            <p className="text-3xl xs:text-lg font-bold z-50">Contact Us</p>
 
-            <div className="flex flex-col items-center p-5">
-                <a href="#" className="text-xl">
+            <div className=" flex flex-col gap-5 p-5 z-50 shrink-0 xs:gap-2">
+                <a href="#" className="text-xl xs:text-lg">
                     Victor
-                    <Image src={ProfilPic} alt="ProfilPicture" className="size-32"></Image>
                 </a>
-                <div className="flex flex-row gap-5">
-                    <a href="#">
-                        <Image src={LinkedinIcon} alt="Linkedin" height={30} width={30}></Image>
-                        <p>LinkedIn</p>
+                <div className="flex gap-5 xs:gap-3">
+                    <a href="https://www.linkedin.com/in/victor-lobb%C3%A9-999848296/" target="blank">
+                        <Image src={LinkedinIcon} alt="Linkedin" height={31} width={31}></Image>
                     </a>
-                    <a href="#">
-                        <Image src={GithubIcon} alt="GitHub" height={31} width={31}></Image>
-                        <p>GitHub</p>
+                    <a href="mailto:victorlobbe@gmail.com">
+                        <Image src={MailIcon} alt="Mail" height={31} width={31}></Image>
                     </a>
-                    <a href="#">
-                        <Image src={AboutmeIcon} alt="Folio" height={30} width={30}></Image>
-                        <p>Folio</p>
+                    <a href="#" target="blank">
+                        <Image src={AboutmeIcon} alt="Folio" height={31} width={31}></Image>
                     </a>
                 </div>
             </div>
 
-            <div className="flex flex-col items-center p-5">
-                <a href="#" className="text-xl">
+            <div className=" flex flex-col gap-5 z-50 shrink-0 xs:gap-2">
+                <a href="#" className="text-xl xs:text-lg">
                     Julien
-                    <Image src={ProfilPic} alt="ProfilPicture" className="size-32"></Image>
                 </a>
-                <div className="flex flex-row gap-5">
-                    <a href="#">
-                        <Image src={LinkedinIcon} alt="Linkedin" height={30} width={30}></Image>
-                        <p>LinkedIn</p>
+                <div className="flex gap-5 xs:gap-3">
+                    <a href="https://www.linkedin.com/in/julien-varela-b23843296/" target="blank">
+                        <Image src={LinkedinIcon} alt="Linkedin" height={31} width={31}></Image>
                     </a>
-                    <a href="#">
-                        <Image src={GithubIcon} alt="GitHub" height={31} width={31}></Image>
-                        <p>GitHub</p>
+                    <a href="mailto:julien.varela@gmail.com">
+                        <Image src={MailIcon} alt="Mail" height={31} width={31}></Image>
                     </a>
-                    <a href="#">
-                        <Image src={AboutmeIcon} alt="Folio" height={30} width={30}></Image>
-                        <p>Folio</p>
+                    <a href="#" target="blank">
+                        <Image src={AboutmeIcon} alt="Folio" height={31} width={31}></Image>
                     </a>
                 </div>
             </div>

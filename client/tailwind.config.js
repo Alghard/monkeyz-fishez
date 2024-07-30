@@ -49,10 +49,6 @@ module.exports = {
                 poppins: ["Poppins", "sans-serif"],
                 alfaslab: ["Alfa Slab One", "serif"],
             },
-            content: {
-                lianeG: 'url("/img/lianeG.svg")',
-                lianeD: 'url("/img/lianeD.svg")',
-            },
         },
     },
     plugins: [],
