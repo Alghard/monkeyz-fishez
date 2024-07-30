@@ -59,7 +59,7 @@ const SignUpForm = () => {
         </div>
         <div>
           <label>Email:</label>
-          <input className="text-blue-500" type="text" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <input className="text-blue-500" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
         </div>
         <div>
           <label>Mot de passe:</label>
