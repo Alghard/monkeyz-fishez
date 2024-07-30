@@ -1,12 +1,17 @@
 //bcrypt permet de hash un mdp
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
+const{ validationResult } = require('express-validator');
 
 const User = require('../models/User');
 
 const msg = "Paire identifiant/mot de passe incorrecte";
 
 exports.signup = async ( req, res ) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
 
   const { username, email, password } = req.body;
 
@@ -14,13 +19,11 @@ exports.signup = async ( req, res ) => {
     //Je passe la fonction méthode hash de bcrypt au mot de passe contenu dans le body 
     //le 10 indique le nombre de fois que le mdp sera hash(plus sécurisé)
     const hashedPassword = await bcrypt.hash(password, 10);
-
     const user = new User({
       username,
       email,
       password: hashedPassword,
     });
-
     await user.save();
     res.status(201).json({ message: 'Utilisateur créé avec succès' });
   } catch (error) {
@@ -29,7 +32,13 @@ exports.signup = async ( req, res ) => {
 };
 
 exports.login = async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+
   const { email, password } = req.body;
+
   try {
     const user = await User.findOne({ email });
     if (!user) {
