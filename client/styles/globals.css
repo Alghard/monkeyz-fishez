@@ -63,7 +63,7 @@
 
 /* BORDERS FROM CARDS */
 
-#try {
+#cardBorder {
     background: linear-gradient(rgb(255, 247, 247), rgb(255, 251, 251)) padding-box,
         linear-gradient(to top, rgb(93, 207, 173), rgb(12, 153, 106)) border-box;
     border-radius: 10px;

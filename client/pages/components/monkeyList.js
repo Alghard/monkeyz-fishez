@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Cards from "./cards";
+import ToggleButton from "./toggleButton";
 
 const MonkeyList = () => {
     const [monkeys, setMonkeys] = useState([]);
@@ -39,3 +40,6 @@ const MonkeyList = () => {
 };
 
 export default MonkeyList;
+
+//! Il faut modifier le lien ici, c'est à cause de lui que toute notre cards ici deviennent un lien. Donc impossible de cliquer sur le toggle button
+//! Il faut que la cards soit le wrapper et qu'uniquement la description,l'image et le titre soient dans un "a" ou un link...
