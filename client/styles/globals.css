@@ -28,8 +28,8 @@
 .before-content-lianeG::before {
     content: url("/img/lianeG.svg");
     position: absolute;
-    top: -90px;
-    left: -60px;
+    top: -120px;
+    left: -120px;
     width: 600px;
     height: 600px;
     z-index: 20;
@@ -38,10 +38,10 @@
 .after-content-lianeD::after {
     content: url("/img/lianeD.svg");
     position: absolute;
-    top: -90px;
-    right: -60px;
-    width: 600px;
-    height: 600px;
+    top: -120px;
+    right: -220px;
+    width: 700px;
+    height: 700px;
     z-index: 20;
 }
 
@@ -52,7 +52,7 @@
     }
 }
 
-/* TREE JS SIZE */
+/* THREE JS SIZE */
 
 #ThreeJsMonkey {
     width: 100%;
