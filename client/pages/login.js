@@ -10,7 +10,6 @@ const Login = () => {
             <ThreeScene />
             <Header></Header>
             <SignUpForm />
-            <span>------------------------------------------------</span>
             <LoginForm />
             <Footer></Footer>
         </main>
